@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#ffffff",
+                        "background-dark": "#0a0a0a",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 1rem;
+        }
+        @media (min-width: 640px) { .masonry-grid { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-100 dark:border-white/5 px-8 md:px-16 py-6 bg-white/80 dark:bg-black/80 backdrop-blur-xl sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">photo_camera</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Lens &amp; Light</h2>
+</div>
+<nav class="hidden md:flex flex-1 justify-center gap-8">
+<a class="text-primary text-sm font-semibold leading-normal" href="#">Gallery</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">About</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Services</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Contact</a>
+</nav>
+<div class="flex gap-3">
+<button class="flex items-center justify-center rounded-full h-10 w-10 border border-slate-100 dark:border-white/10 text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-110 transition-all">
+                        Hire Me
+                    </button>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-10 px-6 md:px-10">
+<div class="layout-content-container flex flex-col max-w-[1400px] flex-1">
+<!-- Hero/Header Section -->
+<div class="flex flex-col gap-4 mb-10">
+<h1 class="text-slate-900 dark:text-white text-5xl md:text-7xl font-light leading-tight tracking-tight mb-2">Visual Narratives</h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg md:text-xl max-w-3xl font-light leading-relaxed">
+    A curated selection of moments captured across the globe. Exploring the interplay of natural light, human emotion, and architectural geometry.
+</p>
+</div>
+<!-- Category Filter -->
+<div class="mb-12 overflow-x-auto">
+<div class="flex min-w-max gap-12 items-center">
+<a class="group relative flex flex-col items-center justify-center text-primary pb-2" href="#">
+<span class="text-xs font-semibold uppercase tracking-[0.2em]">All Perspectives</span>
+<span class="absolute bottom-0 left-0 w-full h-[1px] bg-primary"></span>
+</a>
+<a class="group relative flex flex-col items-center justify-center text-slate-400 hover:text-slate-900 dark:hover:text-white pb-2 transition-all" href="#">
+<span class="text-xs font-semibold uppercase tracking-[0.2em]">Landscape</span>
+<span class="absolute bottom-0 left-0 w-0 h-[1px] bg-primary transition-all group-hover:w-full"></span>
+</a>
+<a class="group relative flex flex-col items-center justify-center text-slate-400 hover:text-slate-900 dark:hover:text-white pb-2 transition-all" href="#">
+<span class="text-xs font-semibold uppercase tracking-[0.2em]">Architecture</span>
+<span class="absolute bottom-0 left-0 w-0 h-[1px] bg-primary transition-all group-hover:w-full"></span>
+</a>
+<a class="group relative flex flex-col items-center justify-center text-slate-400 hover:text-slate-900 dark:hover:text-white pb-2 transition-all" href="#">
+<span class="text-xs font-semibold uppercase tracking-[0.2em]">Portrait</span>
+<span class="absolute bottom-0 left-0 w-0 h-[1px] bg-primary transition-all group-hover:w-full"></span>
+</a>
+<a class="group relative flex flex-col items-center justify-center text-slate-400 hover:text-slate-900 dark:hover:text-white pb-2 transition-all" href="#">
+<span class="text-xs font-semibold uppercase tracking-[0.2em]">Street Life</span>
+<span class="absolute bottom-0 left-0 w-0 h-[1px] bg-primary transition-all group-hover:w-full"></span>
+</a>
+</div>
+</div>
+<!-- Masonry Portfolio Grid -->
+<div class="masonry-grid w-full"><!-- Item 1 -->
+<div class="masonry-item group relative overflow-hidden bg-slate-100 dark:bg-white/5">
+<img class="w-full object-cover transition-transform duration-700 grayscale hover:grayscale-0 scale-100 group-hover:scale-110" data-alt="Majestic mountain range at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7wFpAN9M0AHRh9PGp21MJK6WIMn8dmmcLwWC_xqgjEV5BBH4zYT863r-k4Qc3pWYApKRi7rJoBoy6y6UrsYmK5PAJQIN8ndMV2iZgjE5OKD8LILtTJHEHAO4ckrBDHNF-a5oEAiT0LPgfRYiX8qFiK5EvuJpjTELPIX3w7rIC-uA54FoYhc1x3-1MCWlB171piaMOmO6b8rXz4u9SA2aSGq1qKQX_sQzqROT1luGq2MGM70DRhixLzcAdL1GJTxUUuBnqLS_19pI"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-2">Landscape</span>
+<h3 class="text-white text-2xl font-light tracking-wide">The Silent Peaks</h3>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="masonry-item group relative overflow-hidden bg-slate-100 dark:bg-white/5">
+<img class="w-full object-cover transition-transform duration-700 grayscale hover:grayscale-0 scale-100 group-hover:scale-110" data-alt="Minimalist architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQXTOh1gH2y9MQ5cHVB_OxT680RupXnAJHB3H05uycZu_d2aFcAgxk9_FcDAKKIvWj-aQ9YH4p4toSkvWyCx3OhYgxIxxQzkHLhJbPJ9PxhZ_oPN6ZsPFazn8siTZGrTm3N_dPoREu9kSNsakmkrUHjgBcDYGFXxd26oHnjOnAHclFZQxPcCtAmUU1r4mV9BOLuNqr6wId3s1hor2sK7R4XIdNmVXA0e6NQeh7XY4NKH2XsajUiTJOgzZCdvun-HPU30UpYbVeu4s"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-2">Architecture</span>
+<h3 class="text-white text-2xl font-light tracking-wide">Geometry of Light</h3>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="masonry-item group relative overflow-hidden bg-slate-100 dark:bg-white/5">
+<img class="w-full object-cover transition-transform duration-700 grayscale hover:grayscale-0 scale-100 group-hover:scale-110" data-alt="Minimalist portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdGVIQXESYtb_tktstYHLHk6ZlgkcaHlTk613TjQZr1iZiF1kFS4AAVrA1LEul-ExT0iiIEeQ2qdmYzawqJDWO9Dm04xUfmbsiovIKFDYzd6nKG3W4fgYbgtz6ecv3INNstHlY4dV2Zr1kWzjppyjNKpgYyf_nzkTT1ddXhAfoPMvDWd-azx_QBd3qQfJN8lxIWoMTjGXYGhGBzimeQkx7NVRGA--t8OsBnpQxQy08WS3hXmUgn4Xk7oI5ntCJ1bC7AGjSErJGJ9g"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-2">Portrait</span>
+<h3 class="text-white text-2xl font-light tracking-wide">Unspoken Words</h3>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="masonry-item group relative overflow-hidden bg-slate-100 dark:bg-white/5">
+<img class="w-full object-cover transition-transform duration-700 grayscale hover:grayscale-0 scale-100 group-hover:scale-110" data-alt="Morning fog in forest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbGVz3xnGmL4c2TS8nqLjFMsAC_ceABJnESqNOjfPlTMqK_Wfw1jEgtfE1lMlWWwF0vpdJPyHGFAbeccRrZoZfj1G113IRXCIl8yoRbHyXuqP6S_I91cEXLjewOWP_m_naUpDL5UU1wbsRsrZJO74d9lcXDwKhf0JRH6gutbwHWYyzT_T4OxCJ4hqKrFgR1fSnW2cqzB6ibYNILu99MbiyUjhYHKYFa4UMOl3dPWg57ElgdD8authjY-4IELZU8HDB6EJUmRGBxCg"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-2">Landscape</span>
+<h3 class="text-white text-2xl font-light tracking-wide">Mist &amp; Pines</h3>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="masonry-item group relative overflow-hidden bg-slate-100 dark:bg-white/5">
+<img class="w-full object-cover transition-transform duration-700 grayscale hover:grayscale-0 scale-100 group-hover:scale-110" data-alt="City street night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDltkpSzCgVglA42sgVn17nhdlwZqtPPFTtCV6z4YXob0baXxh5UUyFBcQK56czJb1PeM63djndSaqgKLSw5r8ed0UA8tLjtlWMgtdMuH5A1YHDbtiYoiha2i4PwF8MhEviQvV6RVZLyFRTB9T1fECDaGLl7066migkKdW-vjbNwVblYr1YLWVa-SLrYlzcBHNQynp4KnoinudMYBh5zCuKwuvzPgSMUP-IaE4-lk2vaCppEznfJjQf7ScZvWhSPWAuayARUk-EfL8"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-2">Street</span>
+<h3 class="text-white text-2xl font-light tracking-wide">Neon Reflections</h3>
+</div>
+</div>
+<!-- Item 6 -->
+<div class="masonry-item group relative overflow-hidden bg-slate-100 dark:bg-white/5">
+<img class="w-full object-cover transition-transform duration-700 grayscale hover:grayscale-0 scale-100 group-hover:scale-110" data-alt="Ocean waves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2cURglySJ1qrb1yXui7bkOJDMrsAGCNT6WXSzzA-beMmUvmLeiDeZmfFfTLmxGMwoQvF-BW-1oh7T4IMZ8K3FKQO8pG1Qv-JGhD2oKu1L5XaYv-kkciCCHu2xIvdp80kb2TDO2uJ2XkvC7UYi5P__K9zxi58lJTVkjK9zBKPmMTWXX_DumeW2j90RKAdv5A6_HRZiH_Dk1hMTX-kUNP5po1K7fPcXmjRTajihjuLLw7eo960g85OQcEu1G1qyZHncRIRqS1nJHrI"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+<span class="text-primary text-[10px] font-bold uppercase tracking-[0.3em] mb-2">Landscape</span>
+<h3 class="text-white text-2xl font-light tracking-wide">Eternal Tide</h3>
+</div>
+</div></div>
+<!-- CTA Section -->
+<div class="mt-32 p-12 md:p-24 border-y border-slate-100 dark:border-white/5 text-center">
+<h2 class="text-3xl md:text-5xl font-light text-slate-900 dark:text-white mb-6 tracking-tight">Want to see more?</h2>
+<p class="text-slate-500 dark:text-slate-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed text-lg">
+    My full archive includes over 5,000 professional shots available for licensing and private prints.
+</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="border border-primary text-primary hover:bg-primary hover:text-black px-12 py-4 rounded-full font-semibold uppercase tracking-widest text-xs transition-all duration-300">
+    Request Access
+</button>
+<button class="text-slate-400 hover:text-slate-900 dark:hover:text-white px-12 py-4 font-semibold uppercase tracking-widest text-xs transition-all">
+    Follow on Instagram
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="border-t border-slate-100 dark:border-white/5 px-8 md:px-16 py-16 bg-white dark:bg-black">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined">photo_camera</span>
+<span class="font-bold text-lg text-slate-900 dark:text-white">Lens &amp; Light</span>
+</div>
+<p class="text-sm text-slate-500">© 2024 Lens &amp; Light Photography. All rights reserved.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">camera</span>
+</a>
+<a class="text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+<div class="text-sm text-slate-500 flex gap-8">
+<a class="hover:underline" href="#">Privacy Policy</a>
+<a class="hover:underline" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>
