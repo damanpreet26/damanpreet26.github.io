@@ -6,22 +6,44 @@
 <title>Damanpreet | Photography</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
-
+<style>
+  .menu-overlay {
+    display: none;
+  }
+  .menu-overlay.active {
+    display: flex;
+  }
+</style>
+<script>
+  function toggleMenu() {
+    document.getElementById('menu-overlay').classList.toggle('active');
+  }
+</script>
 </head>
 
 <body class="bg-black text-white">
 
-<header class="flex flex-col md:flex-row justify-between items-center p-6 border-b border-gray-800">
+<header class="flex justify-between items-center p-6 border-b border-gray-800">
 
-<h1 class="text-xl tracking-widest text-center md:text-left">DAMANPREET</h1>
+<h1 class="text-xl tracking-widest">DAMANPREET</h1>
 
-<nav class="flex flex-col md:flex-row gap-4 md:gap-8 text-sm uppercase tracking-wider mt-4 md:mt-0">
+<div class="md:hidden">
+  <button onclick="toggleMenu()" class="text-white text-2xl">☰</button>
+</div>
 
-<a href="index.html" class="hover:text-yellow-400">Home</a>
-<a href="gallery.html" class="hover:text-yellow-400">Gallery</a>
-<a href="about_me.html" class="hover:text-yellow-400">About</a>
-<a href="contact.html" class="hover:text-yellow-400">Contact</a>
+<nav id="menu-overlay" class="menu-overlay fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center gap-8 text-lg uppercase tracking-wider z-50">
+  <a href="index.html" class="hover:text-yellow-400">Home</a>
+  <a href="gallery.html" class="hover:text-yellow-400">Gallery</a>
+  <a href="about_me.html" class="hover:text-yellow-400">About</a>
+  <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+  <button onclick="toggleMenu()" class="mt-8 px-4 py-2 bg-yellow-400 text-black uppercase">Close</button>
+</nav>
 
+<nav class="hidden md:flex gap-8 text-sm uppercase tracking-wider">
+  <a href="index.html">Home</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="about_me.html">About</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
 </header>
@@ -32,13 +54,13 @@
 <img src="images/DEM_2797.jpg"
 class="absolute w-full h-full object-cover opacity-70">
 
-<div class="relative flex flex-col items-center justify-center h-full px-4 text-center">
+<div class="relative flex flex-col items-center justify-center h-full">
 
-<h2 class="text-4xl md:text-6xl font-light tracking-widest">Photography</h2>
-<p class="mt-6 text-gray-300 text-sm md:text-base">Capturing light and moments</p>
+<h2 class="text-6xl font-light tracking-widest">Photography</h2>
+<p class="mt-6 text-gray-300">Capturing light and moments</p>
 
 <a href="gallery.html"
-class="mt-10 px-6 md:px-8 py-2 md:py-3 bg-yellow-400 text-black uppercase text-xs md:text-sm tracking-widest">
+class="mt-10 px-8 py-3 bg-yellow-400 text-black uppercase text-sm tracking-widest">
 View Gallery
 </a>
 
