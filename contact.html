@@ -1,67 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Damanpreet</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
-  .menu-overlay {
-    display: none;
+  body {
+    animation: fadeIn 0.5s ease-in-out;
   }
-  .menu-overlay.active {
-    display: flex;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .bottom-nav {
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
   }
 </style>
-<script>
-  function toggleMenu() {
-    document.getElementById('menu-overlay').classList.toggle('active');
-  }
-</script>
-
 </head>
 
-<body class="bg-black text-white">
+<body class="bg-black text-white flex flex-col min-h-screen">
 
-<header class="flex justify-between items-center p-6 border-b border-gray-800">
-
-<h1 class="text-xl tracking-widest">DAMANPREET</h1>
-
-<div class="md:hidden">
-  <button onclick="toggleMenu()" class="text-white text-2xl">☰</button>
-</div>
-
-<nav id="menu-overlay" class="menu-overlay fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center gap-8 text-lg uppercase tracking-wider z-50">
-  <a href="index.html" class="hover:text-yellow-400">Home</a>
-  <a href="gallery.html" class="hover:text-yellow-400">Gallery</a>
-  <a href="about_me.html" class="hover:text-yellow-400">About</a>
-  <a href="contact.html" class="hover:text-yellow-400">Contact</a>
-  <button onclick="toggleMenu()" class="mt-8 px-4 py-2 bg-yellow-400 text-black uppercase">Close</button>
-</nav>
-
-<nav class="hidden md:flex gap-8 text-sm uppercase tracking-wider">
-  <a href="index.html">Home</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="about_me.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
+<header class="p-4 bg-black text-center border-b border-gray-800">
+  <h1 class="text-xl tracking-widest">Contact</h1>
 </header>
 
+<main class="flex-1 p-4">
+  <p class="text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
+    For photography sessions or collaborations feel free to reach out.
+  </p>
+  <p class="text-sm md:text-base">Email: your@email.com</p>
+</main>
 
-<section class="max-w-4xl mx-auto p-6 md:p-12">
-
-<h2 class="text-3xl md:text-4xl mb-4 md:mb-8">Contact</h2>
-
-<p class="text-gray-300 mb-4 md:mb-6 text-sm md:text-base">
-For photography sessions or collaborations feel free to reach out.
-</p>
-
-<p class="text-sm md:text-base">Email: your@email.com</p>
-
-</section>
+<nav class="bottom-nav fixed bottom-0 left-0 right-0 bg-gray-900 text-white flex justify-around items-center py-2">
+  <a href="index.html" class="flex flex-col items-center text-sm hover:text-yellow-400">
+    <span>🏠</span>
+    <span>Home</span>
+  </a>
+  <a href="gallery.html" class="flex flex-col items-center text-sm hover:text-yellow-400">
+    <span>🖼️</span>
+    <span>Gallery</span>
+  </a>
+  <a href="about_me.html" class="flex flex-col items-center text-sm hover:text-yellow-400">
+    <span>👤</span>
+    <span>About</span>
+  </a>
+  <a href="contact.html" class="flex flex-col items-center text-sm hover:text-yellow-400">
+    <span>✉️</span>
+    <span>Contact</span>
+  </a>
+</nav>
 
 </body>
 </html>
